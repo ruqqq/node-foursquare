@@ -135,6 +135,19 @@ For a list of existing logging points, refer to [config-default.js](https://gith
 
 For more information, see: https://github.com/flatiron/winston
 
+I18n
+----
+
+Add locale param to config:
+
+    var config = {
+        ...
+        'locale' : 'it'
+        ...
+    }
+
+Valid locales are listed in https://developer.foursquare.com/overview/versioning
+
 Testing
 -------
 
