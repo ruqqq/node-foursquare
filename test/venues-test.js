@@ -10,7 +10,7 @@ var VenuesTest = function(config, accessToken) {
 
     explore : function() {
       var test = 'Foursquare.Venues.explore(40.7, -74, \'wine\')';
-      Foursquare.Venues.explore('40.7', '-74', 'wine', {}, accessToken, function (error, data) {
+      Foursquare.Venues.explore('40.7', '-74', null, {}, accessToken, function (error, data) {
         if(error) {
           testUtil.reportError(logger, test, error.message);
         }
