@@ -63,6 +63,11 @@ app.get('/callback', function (req, res) {
 
 app.get('/test', function(req, res) {
   var accessToken = req.query.token || null, type = 'Testing with' + (accessToken ? '' : 'out') + ' Authorization';
+
+  if (!accessToken) {
+    type += ' (tests of API endpoints requiring an access token will not pass)';
+  }
+
   util.log('\n\n' + type + '\n');
   TestSuite(accessToken).execute();
   res.send('<html></html><title>Refer to Console</title><body>' + type + '...</body></html>');

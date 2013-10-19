@@ -9,15 +9,14 @@ var VenuesTest = function(config, accessToken) {
   return {
 
     explore : function() {
-      var test = 'Foursquare.Venues.explore(40.7, -74)';
-      Foursquare.Venues.explore('40.7', '-74', {}, accessToken, function (error, data) {
+      var test = 'Foursquare.Venues.explore(40.7, -74, \'wine\')';
+      Foursquare.Venues.explore('40.7', '-74', 'wine', {}, accessToken, function (error, data) {
         if(error) {
           testUtil.reportError(logger, test, error.message);
         }
         else {
           try {
             testUtil.reportData(logger, test, util.inspect(data));
-            assert.ok(data.keywords);
             assert.ok(data.groups);
             testUtil.reportOk(logger, test);
           } catch (error) {
