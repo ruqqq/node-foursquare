@@ -38,7 +38,7 @@ var TipsTest = function(config, accessToken) {
             testUtil.reportData(logger, test, util.inspect(data));
             assert.ok(data.likes);
             assert.ok(data.likes.count >= 0);
-            assert.ok(data.likes.groups);
+            assert.ok(data.likes.items);
             testUtil.reportOk(logger, test);
           } catch (error) {
             testUtil.reportError(logger, test, error);
