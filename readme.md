@@ -28,6 +28,7 @@ Version History
     * Replaced log4js with winston.
     * Added new endpoints, modules, methods.
     * Refactored testing suite.
+*  v0.2.1 - Unit test fixes and bugs/merges
 
 Use
 ---
